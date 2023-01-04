@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 const DB = process.env.DB_NAME || "Santa-magical-world";
 const URI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.p59na4o.mongodb.net/${DB}?retryWrites=true&w=majority`;
-// const URI = `mongodb+srv://Karlos:${process.env.DB_PASSWORD}@cluster0.p59na4o.mongodb.net/test`;
 
-// mongodb+srv://Karlos:<password>@cluster0.p59na4o.mongodb.net/?retryWrites=true&w=majority
 const MongoDBClient = {
     initialize(){
         try {
