@@ -1,5 +1,5 @@
 const express = require('express')
-var cors = require("cors");
+const cors = require("cors");
 const app = express()
 require('dotenv').config()
 const port = process.env.DB_PORT || 5000;
@@ -9,7 +9,7 @@ const MongoDBClient = require('./mongoClient')
 const categoriesRoute = require('./routes/categoriesRoute')
 const toysRoute = require('./routes/toysRoute')
 
-// cors
+// (Enable All CORS Requests)
 app.use(cors());
 
 
