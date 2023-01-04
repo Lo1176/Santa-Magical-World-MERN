@@ -59,7 +59,7 @@ export default function Home() {
     axiosToys();
   }, []);
 
-console.log(toys);
+// console.log(toys);
 
 
   return (
@@ -82,7 +82,7 @@ console.log(toys);
               {toys.map((toy) => (
                 <StyledTableRow key={toy.name}>
                   <StyledTableCell component="th" scope="toy">
-                    <Link to={`/detail/${toy._id}`}>
+                    <Link to={`/details/${toy._id}`}>
                       <Button variant="text">{toy.name}</Button>
                     </Link>
                   </StyledTableCell>

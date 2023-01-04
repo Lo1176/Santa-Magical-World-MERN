@@ -1,27 +1,24 @@
-import React from 'react';
-import Home from './routes/Home';
-import Toy from './routes/Toy';
-import { Routes, Route } from 'react-router-dom';
-import ErrorPage from "./error-page";
+// import React from "react";
+import Home from "../components/Home";
+import Toy from '../components/Toy';
+import { Routes, Route } from "react-router-dom";
+import ErrorPage from "./ErrorPage";
+import Navbar from "../components/NavBar";
+import AddToy from "../components/AddToy";
 
 
 const App = () => {
-    return (
-        <div>
-            <Routes>
-                <Route 
-                    path="/"
-                    element={<Home />}
-                    // errorElement={<ErrorPage />}
-                    
-                />
-                <Route
-                    path="/detail/:id"
-                    element={<Toy />}
-                />
-            </Routes>
-        </div>
-    );
-}
+  return (
+    <div>
+        <Navbar />
+      <Routes>
+        <Route path="/" element={ <Home /> } />
+        <Route path="/addtoy" element={ <AddToy /> } />
+        <Route path="/details/:id" element={ <Toy /> } />
+        <Route path="*" element={ <ErrorPage /> } />
+      </Routes>
+    </div>
+  );
+};
 
 export default App;
