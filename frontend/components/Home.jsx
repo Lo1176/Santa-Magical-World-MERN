@@ -80,7 +80,7 @@ export default function Home() {
             </TableHead>
             <TableBody>
               {toys.map((toy) => (
-                <StyledTableRow key={toy.name}>
+                <StyledTableRow key={toy._id}>
                   <StyledTableCell component="th" scope="toy">
                     <Link to={`/details/${toy._id}`}>
                       <Button variant="text">{toy.name}</Button>
