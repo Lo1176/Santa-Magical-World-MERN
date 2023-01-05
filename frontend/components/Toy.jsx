@@ -9,15 +9,16 @@ export default function Toy() {
 
   const params = useParams();
   // console.log(params.id)
-  axios.get(`http://localhost:3000/toys/${params.id}`).then((result) => {
-    const name = result.data.toys[0].name;
-    // console.log(name)
-    const description = result.data.toys[0].description;
-    const price = result.data.toys[0].price;
-    setToy(
-      { name: name, description: description, price: price }
-      // [name, description, price]
-    );
+  axios.get(`http://localhost:3000/toys/${params.id}`)
+    .then((result) => {
+      const name = result.data.toys[0].name;
+      // console.log(name)
+      const description = result.data.toys[0].description;
+      const price = result.data.toys[0].price;
+      setToy(
+        { name: name, description: description, price: price }
+        // [name, description, price]
+      );
   });
   return (
     <div>
